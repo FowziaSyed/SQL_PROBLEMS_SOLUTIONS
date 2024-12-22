@@ -6,6 +6,7 @@ These follower IDs are also users of Facebook / Meta. Then, find the famous perc
 Famous Percentage = number of followers a user has / total number of users on the platform.
 
 ******Schema and Dataset :******
+
 CREATE TABLE famous (user_id INT, follower_id INT);
 
 INSERT INTO famous VALUES
