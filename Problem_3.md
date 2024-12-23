@@ -33,4 +33,4 @@ select user_id,user_name from users where user_id =(select friend_id from mutual
 
 ******Output :******
 
-![Example Image](image.png)
+![Example Image](image3.png)
