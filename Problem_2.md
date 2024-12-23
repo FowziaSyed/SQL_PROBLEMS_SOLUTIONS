@@ -40,7 +40,7 @@ INSERT INTO sf_transactions VALUES
 2. applied lag to calculate the percentage change in month over month revenue
    
 ******Query :******
-
+```sql
 with monthwise_totalrevenue as ( 
 	select to_char(created_at,'YYYY-MM') as year_month,sum(value) as total_revenue from sf_transactions
  	group by to_char(created_at,'YYYY-MM') 
@@ -48,9 +48,10 @@ with monthwise_totalrevenue as (
 select year_month, total_revenue,
 round((total_revenue-lag(total_revenue) over(order by year_month))*100.0/lag(total_revenue) over(order by year_month),2) 
 as percentagechanage from monthwise_totalrevenue order by year_month
+```
 
 ******Output :******
 
-![Example Image](image.png)
+![Example Image](image2.png)
 
  
