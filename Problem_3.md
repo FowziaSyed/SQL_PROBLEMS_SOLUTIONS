@@ -16,13 +16,12 @@ INSERT INTO friends VALUES (1,3),(1,5),(2,3),(2,4),(3,1),(3,2),(3,6),(4,7),(5,8)
 
 ******Solution :******
 
-1. First i have used the inner join to get the records only for  karl and hans
-2. As we are finding mutual friends for 2 people  so the count we will get 2 . hence from the output of above whose  friend id has value 2 that person will be the mutual friend.
-   if we are finding for example 3 we have to increase count(friend_id) to 3 etc.
+1. First i have used the inner join to get the records only for  karl and Hans.
+2. As we are finding mutual friends for 2 people so the count we will get 2. Hence from the output of above whose friend id has value 2 that person will be the mutual friend. If we are finding for example 3 we have to increase count(friend_id) to 3 etc.
 3. based on that id we can retrieve the name of that person from users table
 
 ******Query :******
-
+```SQL
 with friends_list as (
 	select u.user_id,u.user_name,f.friend_id from users u inner join friends f
 	on u.user_id=f.user_id where u.user_name in ('Karl','Hans')
@@ -31,7 +30,7 @@ mutual_friendid as (
 	select friend_id from friends_list group by friend_id having count(friend_id)=2
 )
 select user_id,user_name from users where user_id =(select friend_id from mutual_friendid)
-
+```
 ******Output :******
 
 ![Example Image](image3.png)
