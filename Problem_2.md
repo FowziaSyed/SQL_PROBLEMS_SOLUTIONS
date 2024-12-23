@@ -50,6 +50,6 @@ as percentagechanage from monthwise_totalrevenue order by year_month
 
 ******Output :******
 
-
+![Example Image](image.png)
 
  
