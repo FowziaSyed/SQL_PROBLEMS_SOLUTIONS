@@ -21,7 +21,7 @@ INSERT INTO famous VALUES
 3. final step to calculated the percentage value for each user 
 
 ******Query :******
-
+```sql
 with unique_users as (
 	select user_id as users from famous 
 	union 
@@ -33,10 +33,11 @@ total_followers as (
 	select user_id,count(follower_id) as followers from famous group by user_id
 )select f.user_id,(f.followers*100.0)/(userscount) as "Famous Percentage"
 from total_users u , total_followers f  order by f.user_id
+```
 
 ******Output :******
 
-![Example Image](image.png)
+![Example Image](image1.png)
 
 
 
