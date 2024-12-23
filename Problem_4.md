@@ -40,5 +40,5 @@ from forecast_values
 ```
 ******Output :******
 
-
+![Example Image](image4.png)
 
