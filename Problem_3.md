@@ -32,3 +32,5 @@ mutual_friendid as (
 select user_id,user_name from users where user_id =(select friend_id from mutual_friendid)
 
 ******Output :******
+
+![Example Image](image.png)
