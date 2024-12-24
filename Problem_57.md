@@ -6,21 +6,21 @@ Find the top 3 most common letters across all the words from both the tables (ig
 Output the letter along with the number of occurrences and order records in descending order based on the number of occurrences.
 
 ******Schema and Dataset :******
-
-CREATE TABLE google_file_store (contents VARCHAR(MAX), filename VARCHAR(255));
+```sql
+CREATE TABLE google_file_store (contents VARCHAR, filename VARCHAR(255));
 
 INSERT INTO google_file_store (contents, filename) VALUES 
 ('This is a sample content with some words.', 'file1.txt'), 
 ('Another file with more words and letters.', 'file2.txt'), 
 ('Text for testing purposes with various characters.', 'file3.txt');
 
-CREATE TABLE google_word_lists ( words1 VARCHAR(MAX), words2 VARCHAR(MAX));
+CREATE TABLE google_word_lists ( words1 VARCHAR, words2 VARCHAR);
 
 INSERT INTO google_word_lists (words1, words2) VALUES 
 ('apple banana cherry', 'dog elephant fox'), 
 ('grape honeydew kiwi', 'lemon mango nectarine'), 
 ('orange papaya quince', 'raspberry strawberry tangerine');
-
+```
 ******Solution :******
 
 1. comnibed the data from both tables
