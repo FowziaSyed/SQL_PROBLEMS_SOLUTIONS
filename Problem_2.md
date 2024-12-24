@@ -6,7 +6,7 @@ The output should include the year-month date (YYYY-MM) and percentage change, r
 The percentage change column will be populated from the 2nd month forward and calculated as ((this month’s revenue — last month’s revenue) / last month’s revenue)*100.
 
 ******Schema and Dataset :******
-
+```sql
 CREATE TABLE sf_transactions(id INT, created_at timestamp, value INT, purchase_id INT);
 
 INSERT INTO sf_transactions VALUES
@@ -33,6 +33,7 @@ INSERT INTO sf_transactions VALUES
 (21, '2019-03-22 00:00:00', 151688, 47), 
 (22, '2019-03-26 00:00:00', 102327, 18), 
 (23, '2019-03-30 00:00:00', 156147, 25);
+```
 
 ******Solution :******
 
