@@ -55,7 +55,7 @@ group by user_id,date order by week_number
 
 ******Output :******
 
-![Example Image](image6.png)
+![Example Image](image7.png)
 
 
 
